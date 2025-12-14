@@ -15,9 +15,14 @@ concurrency:
 
 jobs:
   ci:
-    uses: DeterminateSystems/ci/.github/workflows/workflow.yml@main
+    uses: Cambridge-Vision-Technology/ci/.github/workflows/workflow.yml@main
     permissions:
       id-token: write
       contents: read
     with:
       visibility: public
+      runner-map: |
+        {
+          "x86_64-linux": "x86_64-linux",
+          "aarch64-darwin": "macos-arm64-nix-darwin"
+        }
