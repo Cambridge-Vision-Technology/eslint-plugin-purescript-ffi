@@ -1,0 +1,40 @@
+{
+  "name": "eslint-plugin-purescript-ffi",
+  "version": "1.0.0",
+  "description": "ESLint plugin to enforce FFI stub-only pattern for PureScript-JavaScript interop",
+  "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "ffi",
+    "purescript",
+    "javascript"
+  ],
+  "author": "Cambridge Vision Technology",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cambridge-Vision-Technology/eslint-plugin-purescript-ffi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cambridge-Vision-Technology/eslint-plugin-purescript-ffi/issues"
+  },
+  "homepage": "https://github.com/Cambridge-Vision-Technology/eslint-plugin-purescript-ffi#readme",
+  "peerDependencies": {
+    "eslint": ">=8.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "node -e \"console.error('❌ Use Nix: nix flake check'); process.exit(1)\""
+  }
+}
