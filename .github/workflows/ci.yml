@@ -23,6 +23,6 @@ jobs:
       visibility: public
       runner-map: |
         {
-          "x86_64-linux": "x86_64-linux",
-          "aarch64-darwin": "macos-arm64-nix-darwin"
+          "x86_64-linux": "ubuntu-latest",
+          "aarch64-darwin": "macos-latest"
         }
