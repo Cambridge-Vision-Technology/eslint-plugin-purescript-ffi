@@ -4,6 +4,11 @@
  * FFI files should ONLY contain thin wrappers to external libraries.
  * All business logic must be in PureScript.
  *
+ * FILE TARGETING:
+ * Rules apply to all files matched by your ESLint config's `files` pattern.
+ * Typically configured as: files: ["src/**/*.js"]
+ * The plugin does NOT filter by path - use ESLint config to control scope.
+ *
  * ALLOWED:
  * - Direct library calls: `export const foo = (x) => () => lib.method(x)`
  * - Async wrappers: `export const foo = (x) => async () => lib.method(x)`
@@ -57,12 +62,8 @@ export const rules = {
       },
     },
     create(context) {
-      const filename = context.getFilename();
-
-      if (!filename.includes("/FFI/") && !filename.includes("\\FFI\\")) {
-        return {};
-      }
-
+      // Rule applies to all files matched by ESLint config's `files` pattern.
+      // No path filtering here - let the ESLint config control which files are checked.
       return {
         FunctionDeclaration(node) {
           const parent = node.parent;
@@ -165,12 +166,8 @@ export const rules = {
       },
     },
     create(context) {
-      const filename = context.getFilename();
-
-      if (!filename.includes("/FFI/") && !filename.includes("\\FFI\\")) {
-        return {};
-      }
-
+      // Rule applies to all files matched by ESLint config's `files` pattern.
+      // No path filtering here - let the ESLint config control which files are checked.
       const isLocalImport = (source) => {
         if (!source) {
           return false;
