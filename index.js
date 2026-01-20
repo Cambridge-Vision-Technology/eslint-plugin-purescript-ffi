@@ -6,7 +6,7 @@
  *
  * FILE TARGETING:
  * Rules apply to all files matched by your ESLint config's `files` pattern.
- * Typically configured as: files: ["src/**/*.js"]
+ * Typically configured as: files: ["src/..."]  (glob patterns like src/**.js)
  * The plugin does NOT filter by path - use ESLint config to control scope.
  *
  * ALLOWED:
